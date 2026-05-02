@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "CodeConnect.AppHost/CodeConnect.AppHost.csproj"
+  }
+}

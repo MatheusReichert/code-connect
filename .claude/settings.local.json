@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet --version)",
+      "Bash(dotnet workload *)",
+      "Bash(dotnet tool *)",
+      "Bash(aspire --version)",
+      "Bash(aspire new *)",
+      "Bash(aspire --help)",
+      "Bash(openspec new *)",
+      "Bash(openspec status *)",
+      "Bash(openspec instructions *)",
+      "Bash(gh auth *)",
+      "Bash(git -C C:/Users/reichert/code-connect remote -v)",
+      "Bash(git -C C:/Users/reichert/code-connect log --oneline -5)",
+      "Bash(git -C C:/Users/reichert/code-connect branch -m master main)",
+      "Bash(git -C C:/Users/reichert/code-connect add -A)",
+      "Bash(git -C C:/Users/reichert/code-connect status --short)"
+    ]
+  }
+}
