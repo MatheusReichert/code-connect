@@ -15,37 +15,37 @@
 ## 3. Atoms
 
 - [x] 3.1 `Button` (variantes `primary`, `ghost`, `social`) + teste
-- [ ] 3.2 `Input` (controlado, suporta `error`) + teste
-- [ ] 3.3 `Checkbox` (controlado, label opcional) + teste
-- [ ] 3.4 `Label` + teste
-- [ ] 3.5 `Link` (wrapper de `react-router-dom` `Link` com estilo padrão) + teste
-- [ ] 3.6 `Logo` (logo "code connect" inline SVG ou img) + teste
+- [x] 3.2 `Input` (controlado, suporta `error`) + teste
+- [x] 3.3 `Checkbox` (controlado, label opcional) + teste
+- [x] 3.4 `Label` + teste
+- [x] 3.5 `Link` (wrapper de `react-router-dom` `Link` com estilo padrão) + teste
+- [x] 3.6 `Logo` (logo "code connect" inline SVG ou img) + teste
 
 ## 4. Molecules
 
-- [ ] 4.1 `FormField` compondo `Label` + `Input` + mensagem de erro + teste
-- [ ] 4.2 `SocialLoginButton` (props: `provider`, `onClick`) + teste cobrindo click
-- [ ] 4.3 `OrDivider` (linha com texto centralizado) + teste
+- [x] 4.1 `FormField` compondo `Label` + `Input` + mensagem de erro + teste
+- [x] 4.2 `SocialLoginButton` (props: `provider`, `onClick`) + teste cobrindo click
+- [x] 4.3 `OrDivider` (linha com texto centralizado) + teste
 
 ## 5. Organisms
 
-- [ ] 5.1 `AuthBanner` (recebe `imageSrc` e renderiza com `Logo` sobreposto) + teste
-- [ ] 5.2 `SocialLoginGroup` (renderiza GitHub + Gmail, repassa `onSocialLogin`) + teste
-- [ ] 5.3 `LoginForm` (props: `onSubmit`, `onSocialLogin`) + teste cobrindo submit e click social
-- [ ] 5.4 `SignupForm` (props: `onSubmit`) + teste cobrindo submit válido e erro de senha não confere
+- [x] 5.1 `AuthBanner` (recebe `imageSrc` e renderiza com `Logo` sobreposto) + teste
+- [x] 5.2 `SocialLoginGroup` (renderiza GitHub + Gmail, repassa `onSocialLogin`) + teste
+- [x] 5.3 `LoginForm` (props: `onSubmit`, `onSocialLogin`) + teste cobrindo submit e click social
+- [x] 5.4 `SignupForm` (props: `onSubmit`) + teste cobrindo submit válido e erro de senha não confere
 
 ## 6. Template
 
-- [ ] 6.1 `AuthLayout` (props: `banner`, `children`) com background pattern + teste
+- [x] 6.1 `AuthLayout` (props: `banner`, `children`) com background pattern + teste
 
 ## 7. Pages
 
-- [ ] 7.1 `LoginPage` compondo `AuthLayout` + `LoginForm` + `SocialLoginGroup` + link para `/cadastro` + teste
-- [ ] 7.2 `SignupPage` compondo `AuthLayout` + `SignupForm` + link para `/login` + teste
+- [x] 7.1 `LoginPage` compondo `AuthLayout` + `LoginForm` + `SocialLoginGroup` + link para `/cadastro` + teste
+- [x] 7.2 `SignupPage` compondo `AuthLayout` + `SignupForm` + link para `/login` + teste
 
 ## 8. Verificação
 
-- [ ] 8.1 Rodar `npm run lint` no `frontend/` e corrigir issues
-- [ ] 8.2 Rodar `npm test` no `frontend/` e garantir que todos os testes passem
+- [x] 8.1 Rodar `npm run lint` no `frontend/` e corrigir issues
+- [x] 8.2 Rodar `npm test` no `frontend/` e garantir que todos os testes passem
 - [ ] 8.3 Rodar `aspire run` e validar manualmente `/`, `/login`, `/cadastro` no navegador
 - [ ] 8.4 Conferir que o layout em `/login` corresponde ao `figma/login_page.png`

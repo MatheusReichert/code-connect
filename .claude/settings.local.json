@@ -15,7 +15,19 @@
       "Bash(git -C C:/Users/reichert/code-connect log --oneline -5)",
       "Bash(git -C C:/Users/reichert/code-connect branch -m master main)",
       "Bash(git -C C:/Users/reichert/code-connect add -A)",
-      "Bash(git -C C:/Users/reichert/code-connect status --short)"
+      "Bash(git -C C:/Users/reichert/code-connect status --short)",
+      "Bash(git -C C:/Users/reichert/code-connect commit -m \"chore: initial commit with Aspire scaffold and openspec proposal\")",
+      "Bash(git -C C:/Users/reichert/code-connect config commit.gpgsign)",
+      "Bash(git -C C:/Users/reichert/code-connect config user.signingkey)",
+      "Bash(git -C C:/Users/reichert/code-connect commit --no-gpg-sign -m \"chore: initial commit with Aspire scaffold and openspec proposal\")",
+      "Bash(gh repo *)",
+      "Bash(git -C C:/Users/reichert/code-connect remote set-url origin https://github.com/MatheusReichert/code-connect.git)",
+      "Bash(git -C C:/Users/reichert/code-connect push -u origin main)",
+      "Bash(npm install *)",
+      "Bash(npm view *)",
+      "Bash(git -C C:/Users/reichert/code-connect add frontend/package.json frontend/package-lock.json)",
+      "Bash(git -C C:/Users/reichert/code-connect commit --no-gpg-sign -m \"chore\\(deps\\): update frontend deps to latest compatible versions\")",
+      "Bash(git -C C:/Users/reichert/code-connect push)"
     ]
   }
 }
