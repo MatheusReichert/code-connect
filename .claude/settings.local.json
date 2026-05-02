@@ -30,7 +30,10 @@
       "Bash(git -C C:/Users/reichert/code-connect push)",
       "Bash(npm remove *)",
       "Bash(npx *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(python3 *)",
+      "Bash(git -C C:/Users/reichert/code-connect add frontend/)",
+      "Bash(git -C C:/Users/reichert/code-connect commit --no-gpg-sign -m \"chore\\(deps\\): replace eslint with biome and update all deps to latest\")"
     ]
   }
 }
