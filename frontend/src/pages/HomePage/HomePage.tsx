@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import aspireLogo from "/Aspire.png";
 import "../../App.css";
 
@@ -15,7 +15,7 @@ export function HomePage() {
 	const [error, setError] = useState<string | null>(null);
 	const [useCelsius, setUseCelsius] = useState(false);
 
-	const fetchWeatherForecast = async () => {
+	const fetchWeatherForecast = useCallback(async () => {
 		setLoading(true);
 		setError(null);
 
@@ -30,19 +30,17 @@ export function HomePage() {
 			setWeatherData(data);
 		} catch (err) {
 			setError(
-				err instanceof Error ? err.message : "Failed to fetch weather data"
+				err instanceof Error ? err.message : "Failed to fetch weather data",
 			);
 			console.error("Error fetching weather forecast:", err);
 		} finally {
 			setLoading(false);
 		}
-	};
+	}, []);
 
 	useEffect(() => {
 		fetchWeatherForecast();
-		// fetchWeatherForecast is defined inside the component but stable across renders
-		// biome-ignore lint/correctness/useExhaustiveDependencies: intentionally omitted
-	}, []);
+	}, [fetchWeatherForecast]);
 
 	const formatDate = (dateString: string) => {
 		return new Date(dateString).toLocaleDateString(undefined, {
@@ -65,9 +63,7 @@ export function HomePage() {
 					<img src={aspireLogo} className="logo" alt="Aspire logo" />
 				</a>
 				<h1 className="app-title">Aspire Starter</h1>
-				<p className="app-subtitle">
-					Modern distributed application development
-				</p>
+				<p className="app-subtitle">Modern distributed application development</p>
 			</header>
 
 			<main className="main-content">
@@ -157,9 +153,12 @@ export function HomePage() {
 								aria-live="polite"
 								aria-label="Loading weather data"
 							>
-								{[...Array(5)].map((_, i) => (
-									<div key={i} className="skeleton-row" aria-hidden="true" />
-								))}
+								{[...Array(5)].map((_, i) => {
+									// biome-ignore lint/suspicious/noArrayIndexKey: static skeleton with no reordering
+									return (
+										<div key={i} className="skeleton-row" aria-hidden="true" />
+									);
+								})}
 								<span className="visually-hidden">
 									Loading weather forecast data...
 								</span>
@@ -168,9 +167,9 @@ export function HomePage() {
 
 						{weatherData.length > 0 && (
 							<div className="weather-grid">
-								{weatherData.map((forecast, index) => (
+								{weatherData.map((forecast) => (
 									<article
-										key={index}
+										key={forecast.date}
 										className="weather-card"
 										aria-label={`Weather for ${formatDate(forecast.date)}`}
 									>
@@ -181,6 +180,7 @@ export function HomePage() {
 										</h3>
 										<p className="weather-summary">{forecast.summary}</p>
 										<div
+											role="group"
 											className="weather-temps"
 											aria-label={`Temperature: ${useCelsius ? forecast.temperatureC : forecast.temperatureF} degrees ${useCelsius ? "Celsius" : "Fahrenheit"}`}
 										>

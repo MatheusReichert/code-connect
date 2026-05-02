@@ -5,7 +5,7 @@ import { SocialLoginGroup } from '../../components/organisms/SocialLoginGroup/So
 import { OrDivider } from '../../components/molecules/OrDivider/OrDivider';
 import { Link } from '../../components/atoms/Link/Link';
 import type { LoginValues } from '../../components/organisms/LoginForm/LoginForm';
-import loginBanner from '../../assets/login_banner.png';
+import loginBanner from '../../assets/banner_image.png';
 
 export function LoginPage() {
   const handleLoginSubmit = (values: LoginValues) => {
