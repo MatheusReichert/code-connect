@@ -30,7 +30,7 @@ export function HomePage() {
 			setWeatherData(data);
 		} catch (err) {
 			setError(
-				err instanceof Error ? err.message : "Failed to fetch weather data",
+				err instanceof Error ? err.message : "Failed to fetch weather data"
 			);
 			console.error("Error fetching weather forecast:", err);
 		} finally {
@@ -63,7 +63,9 @@ export function HomePage() {
 					<img src={aspireLogo} className="logo" alt="Aspire logo" />
 				</a>
 				<h1 className="app-title">Aspire Starter</h1>
-				<p className="app-subtitle">Modern distributed application development</p>
+				<p className="app-subtitle">
+					Modern distributed application development
+				</p>
 			</header>
 
 			<main className="main-content">
@@ -179,11 +181,7 @@ export function HomePage() {
 											</time>
 										</h3>
 										<p className="weather-summary">{forecast.summary}</p>
-										<div
-											role="group"
-											className="weather-temps"
-											aria-label={`Temperature: ${useCelsius ? forecast.temperatureC : forecast.temperatureF} degrees ${useCelsius ? "Celsius" : "Fahrenheit"}`}
-										>
+										<div className="weather-temps">
 											<div className="temp-group">
 												<span className="temp-value" aria-hidden="true">
 													{useCelsius

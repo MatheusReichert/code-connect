@@ -6,25 +6,11 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"includes": ["**", "!!**/dist"]
+		"includes": ["**", "!!**/dist", "!!**/*.css"]
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab"
-	},
-	"css": {
-		"parser": {
-			"allowWrongLineComments": true,
-			"cssModules": false
-		},
-		"formatter": {
-			"enabled": true,
-			"indentStyle": "tab",
-			"quoteStyle": "double"
-		},
-		"linter": {
-			"enabled": false
-		}
 	},
 	"linter": {
 		"enabled": true,
@@ -35,7 +21,8 @@
 				"useHookAtTopLevel": "error"
 			},
 			"suspicious": {
-				"noExplicitAny": "warn"
+				"noExplicitAny": "warn",
+				"noArrayIndexKey": "warn"
 			},
 			"style": {
 				"noNonNullAssertion": "off"
@@ -56,15 +43,5 @@
 				"organizeImports": "on"
 			}
 		}
-	},
-	"overrides": [
-		{
-			"includes": ["**/*.css"],
-			"css": {
-				"parser": {
-					"allowWrongLineComments": true
-				}
-			}
-		}
-	]
+	}
 }
