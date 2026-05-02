@@ -6,7 +6,7 @@ interface SocialLoginGroupProps {
 
 export function SocialLoginGroup({ onSocialLogin }: SocialLoginGroupProps) {
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <div className="flex justify-center gap-10 w-full">
       <SocialLoginButton
         provider="github"
         onClick={() => onSocialLogin('github')}

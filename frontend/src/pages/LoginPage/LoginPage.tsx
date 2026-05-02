@@ -19,12 +19,21 @@ export function LoginPage() {
   return (
     <AuthLayout banner={<AuthBanner imageSrc={loginBanner} />}>
       <LoginForm onSubmit={handleLoginSubmit} />
+      
       <OrDivider />
+      
       <SocialLoginGroup onSocialLogin={handleSocialLogin} />
       
-      <p className="mt-8 text-muted">
-        Não tem conta? <Link to="/cadastro">Crie seu cadastro!</Link>
-      </p>
+      <div className="mt-10 flex flex-col items-center gap-4">
+        <p className="text-white text-sm font-medium">Ainda não tem conta?</p>
+        <Link to="/cadastro" className="flex items-center gap-2 group">
+          Crie seu cadastro!
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+          </svg>
+        </Link>
+      </div>
     </AuthLayout>
   );
 }

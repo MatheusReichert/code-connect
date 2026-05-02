@@ -27,7 +27,10 @@
       "Bash(npm view *)",
       "Bash(git -C C:/Users/reichert/code-connect add frontend/package.json frontend/package-lock.json)",
       "Bash(git -C C:/Users/reichert/code-connect commit --no-gpg-sign -m \"chore\\(deps\\): update frontend deps to latest compatible versions\")",
-      "Bash(git -C C:/Users/reichert/code-connect push)"
+      "Bash(git -C C:/Users/reichert/code-connect push)",
+      "Bash(npm remove *)",
+      "Bash(npx *)",
+      "Bash(npm run *)"
     ]
   }
 }

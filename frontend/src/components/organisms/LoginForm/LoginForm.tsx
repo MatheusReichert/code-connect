@@ -26,17 +26,17 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full max-w-sm">
-      <div className="flex flex-col gap-1">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-8 w-full">
+      <div className="flex flex-col gap-2">
         <h1 className="text-white text-3xl font-bold">Login</h1>
-        <p className="text-muted">Boas-vindas! Faça seu login.</p>
+        <p className="text-muted text-lg">Boas-vindas! Faça seu login.</p>
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-6">
         <FormField
           label="Email ou usuário"
           id="identifier"
-          placeholder="Digite seu email ou usuário"
+          placeholder="usuario123"
           value={identifier}
           onChange={(e) => setIdentifier(e.target.value)}
           required
@@ -45,7 +45,7 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
           label="Senha"
           id="password"
           type="password"
-          placeholder="Digite sua senha"
+          placeholder="******"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -59,12 +59,12 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
           checked={rememberMe}
           onChange={(e) => setRememberMe(e.target.checked)}
         />
-        <Link to="/esqueci-senha" className="text-sm opacity-50 cursor-not-allowed">
+        <Link to="/esqueci-senha" className="text-sm font-medium hover:text-white transition-colors">
           Esqueci a senha
         </Link>
       </div>
 
-      <Button type="submit">Login</Button>
+      <Button type="submit" showArrow>Login</Button>
     </form>
   );
 }
